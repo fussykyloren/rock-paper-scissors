@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&family=Rubik:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Kumar One', cursive;
+    color: white;
+    font-size: 48px;
+}
+
+#scores {
+    display: flex;
+    justify-content: center;
+    border: 4px solid white;
+    border-radius: 10px;
+    font-family: 'Kumar One', cursive;
+    font-size: 40px;
+    align-items: center;
+    color: white;
+}
+
+#message {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Kumar One', cursive;
+    font-size: 24px;
+    align-items: center;
+    color: white;
+}
+
+#choices {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: 4px solid white;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+button:hover {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.5);
+}
+
+#Rock {
+    margin-right: 60px;
+}
+
+#Scissors {
+    margin-left: 60px;
+}
+
+#restart {
+    display: flex;
+    justify-content: center;
+}
+
+#restart-button {
+    margin-top: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: 'Kumar One', cursive;
+    font-size: 40px;
+    border-radius: 10px;
+}
+
+footer {
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 12px;
+}

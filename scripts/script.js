@@ -11,7 +11,7 @@ const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
-        if (button.id == "restart") {
+        if (button.id == "restart-button") {
             gameRestart();
         }
         else {
@@ -54,7 +54,7 @@ function playRound(playerSelection, computerSelection) {
         computerScore++;
         computerScoreSpan.innerHTML = computerScore;
     }
-    roundResults = `Round ${ roundNumber } Results:\nPlayer: ${ playerSelection } --- Computer: ${ computerSelection }`;
+    roundResults = `Round ${ roundNumber } Results: Player: ${ playerSelection } ----- Computer: ${ computerSelection }`;
     messageParagraph.innerHTML = roundResults;
 }
 
