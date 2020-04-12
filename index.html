@@ -2,65 +2,36 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Index Template</title>
+  <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <script>
-        const options = ["Rock", "Paper", "Scissors"];
-        let playerScore = 0;
-        let computerScore = 0;
-        let roundNumber = 0;
-        let outcome = ``;
-        function computerPlay() {
-            
-            return options[Math.floor(Math.random() * options.length)];
-        }
-        
-        function playRound(playerSelection, computerSelection) {
-            let modPlayerSelection = playerSelection.toUpperCase();
-            let modComputerSelection = computerSelection.toUpperCase();
-            let outcome = ``;
-            if ((modPlayerSelection == "ROCK" && modComputerSelection == "SCISSORS") || 
-                (modPlayerSelection == "SCISSORS" && modComputerSelection == "PAPER") || 
-                (modPlayerSelection == "PAPER" && modComputerSelection == "ROCK")) {
-                playerScore++;
-            }
-            else if ((modPlayerSelection == "SCISSORS" && modComputerSelection == "ROCK") || 
-                (modPlayerSelection == "PAPER" && modComputerSelection == "SCISSORS") || 
-                (modPlayerSelection == "ROCK" && modComputerSelection == "PAPER")) {
-                computerScore++;
-            }
-            console.log(`Player: ${ modPlayerSelection } --- Computer: ${ modComputerSelection }`);
-        }
-        
-        function calculateRoundResults() {
-             return `Round ${ roundNumber } Results: \n Player: ${ playerScore } Computer: ${ computerScore }`;
-        }
-        function calculateWinner() {
-            if ((playerScore > 2) || (computerScore > 2)) {
-                if (playerScore > computerScore) {
-                    outcome = `You win! You beat the computer by a score of ${ playerScore } to ${ computerScore }.`;
-                }
-                else {
-                    outcome = `You lose.. The computer won by a score of ${ computerScore } to ${ playerScore }.`;
-                }
-            }
-            return outcome;
-        }
-        
-        function game() {
-            while (playerScore <= 2 && computerScore <= 2) {
-                let playerSelection = prompt("Rock, Paper or Scissors?").toUpperCase();
-                let computerSelection = computerPlay();
-                playRound(playerSelection, computerSelection);
-                console.log(calculateRoundResults());
-                roundNumber++;
-            }
-            
-            console.log(calculateWinner());
-        }
-        
-        game();
-    </script>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    
+    <div id=scores>
+        <span id="player-score">0</span>:<span id="computer-score">0</span>
+    </div>
+    
+    <div id="message">
+        <p>Ready to play?</p>
+    </div>
+    
+    <div id="choices">
+        <button id="Rock">Rock</button>
+        <button id="Paper">Paper</button>
+        <button id="Scissors">Scissors</button>
+    </div>
+    
+    <button id="restart">Restart</button>
+    
+    <script src="script.js"></script>
+    
+    <footer>
+        <h3>All images used are from <a href="icons8.com">icons8</a>.</h3>
+        <p><a href="https://icons8.com/icon/37409/rock">Rock icon by Icons8</a></p>
+        <p><a href="https://icons8.com/icon/48760/paper">Paper icon by Icons8</a></p>
+        <p><a href="https://icons8.com/icon/48970/scissors">Scissors icon by Icons8</a></p>
+    </footer>
 </body>
 </html>
